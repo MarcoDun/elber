@@ -1,3 +1,21 @@
 <template name="login">
-<p> this is the login page </p>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<section class="loginform cf">
+		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+			<ul>
+				<li>
+					<label for="usermail">Email</label>
+					<input type="email" name="usermail" placeholder="yourname@email.com" required>
+				</li>
+				<li>
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="password" required></li>
+				<button class="button"  style="font-size:250%;margin-right: 30px; " onClick="window.location.href='/dashboard';"><span class="icon">Login</span></button>
+			</ul>
+		</form>
+	</section>
+</body>
 </template>

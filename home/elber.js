@@ -18,6 +18,10 @@ Router.route('/login', function() {
 	this.render('login');
 });
 
+Router.route('/dashboard', function(){
+	this.render('dashboard');
+});
+
 
 if (Meteor.isClient) {
   
