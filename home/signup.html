@@ -1,11 +1,45 @@
 <template name="signup">
 
 <form class="form-vertical" action="/signup_submit/" method="POST" autocomplete="on">
-	<label for="email">Email</label>
-    <input type="email" value="" name="email" id="email" placeholder="name@example.com">
+	<fieldset>
+    	<legend>Account</legend>
+        
+    	<label for="email">Email</label>
+    	<input type="email" value="" name="email" id="email" placeholder="name@example.com">
     
-    <label for="password">Password</label>
-    <input type="password" value="" name="password" id="password"   placeholder="At least 5 characters">
+    	<label for="password">Password</label>
+    	<input type="password" value="" name="password" id="password"   placeholder="At least 5 characters">
+    </fieldset>
+    
+    <fieldset>
+    	<legend>Rider Information</legend>
+        
+    	<label for="rider-name">Name</label>
+    	<input type="text" value="" name="name" id="rider-name" placeholder="John">
+    
+    	<label for="rider-mobile">Phone Number</label> 
+    	<input type="tel" value="" name="rider-mobile" id="rider-mobile"   placeholder="(555) 555-5555">
+        
+        <label for="rider-address">Address</label>
+        <input type="text" value="" name="rider-address" id="rider-address"   placeholder="1200 Main St">
+        <input type="text" value="" name="rider-state" id="rider-state"   placeholder="State">
+        <input type="text" value="" name="rider-zip" id="rider-zip"   placeholder="ZIP Code">
+    </fieldset>
+    
+    <fieldset>
+    	<legend>Additional Person of Contact</legend>
+        
+    	<label for="other-name">Name</label>
+    	<input type="text" value="" name="name" id="other-name" placeholder="John">
+    
+    	<label for="other-mobile">Phone Number</label> 
+    	<input type="tel" value="" name="mobile" id="other-mobile"   placeholder="(555) 555-5555">
+        
+        <label for="other-address">Address</label>
+        <input type="text" value="" name="other-address" id="other-address"   placeholder="1200 Main St">
+        <input type="text" value="" name="other-state" id="other-state"   placeholder="State">
+        <input type="text" value="" name="other-zip" id="other-zip"   placeholder="ZIP Code">
+    </fieldset>
 </form>
 
 
