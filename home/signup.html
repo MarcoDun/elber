@@ -1,25 +1,29 @@
+
 <template name="signup">
+
+<body>
+<h1 style="font-family:Arial, sans-serif;">Signup as a Rider</h1>
 
 <form class="form-vertical" action="/signup_submit/" method="POST" autocomplete="on">
 	<fieldset>
-    	<legend>Account</legend>
+    	<legend style="font-family:Arial, sans-serif;">Account</legend>
         
-    	<label for="email">Email</label>
+    	<label for="email" style="font-family:Arial, sans-serif;">Email</label>
     	<input type="email" value="" name="email" id="email" placeholder="name@example.com">
-    
-    	<label for="password">Password</label>
+    	<br>
+    	<label for="password" style="font-family:Arial, sans-serif;">Password</label>
     	<input type="password" value="" name="password" id="password"   placeholder="At least 5 characters">
     </fieldset>
     
-    <fieldset>
+    <fieldset style="font-family:Arial, sans-serif;">
     	<legend>Rider Information</legend>
         
-    	<label for="rider-name">Name</label>
+    	<label for="rider-name" style="font-family:Arial, sans-serif;">Name</label>
     	<input type="text" value="" name="name" id="rider-name" placeholder="John">
-    
+    	<br>
     	<label for="rider-mobile">Phone Number</label> 
     	<input type="tel" value="" name="rider-mobile" id="rider-mobile"   placeholder="(555) 555-5555">
-        
+        <br>
         <label for="rider-address">Address</label>
         <input type="text" value="" name="rider-address" id="rider-address"   placeholder="1200 Main St">
         <input type="text" value="" name="rider-state" id="rider-state"   placeholder="State">
@@ -27,21 +31,37 @@
     </fieldset>
     
     <fieldset>
-    	<legend>Additional Person of Contact</legend>
+    	<legend style="font-family:Arial, sans-serif;">Additional Person of Contact</legend>
         
-    	<label for="other-name">Name</label>
+    	<label for="other-name" style="font-family:Arial, sans-serif;">Name</label>
     	<input type="text" value="" name="name" id="other-name" placeholder="John">
-    
-    	<label for="other-mobile">Phone Number</label> 
+    	<br>
+    	<label for="other-mobile" style="font-family:Arial, sans-serif;">Phone Number</label> 
     	<input type="tel" value="" name="mobile" id="other-mobile"   placeholder="(555) 555-5555">
-        
-        <label for="other-address">Address</label>
+        <br>
+        <label for="other-address" style="font-family:Arial, sans-serif;">Address</label>
         <input type="text" value="" name="other-address" id="other-address"   placeholder="1200 Main St">
         <input type="text" value="" name="other-state" id="other-state"   placeholder="State">
         <input type="text" value="" name="other-zip" id="other-zip"   placeholder="ZIP Code">
     </fieldset>
+    
+    <fieldset>
+    	<legend style="font-family:Arial, sans-serif;">Credit Card Info</legend>
+        <p style="font-family:Arial, sans-serif;">We ask for a small monthly fee in order to compensate our drivers for gas costs.</p>
+        
+        <label for="creditcard" style="font-family:Arial, sans-serif;">Credit Card Number</label>
+    	<input type="text" value="" name="creditcard" id="creditcard" placeholder="XXXX-XXXX-XXXX-XXXX">
+        
+        <label for="ccv" style="font-family:Arial, sans-serif;">CCV</label>
+    	<input type="text" value="" name="ccv" id="ccv" placeholder="XXX">
+        <br>
+        <label for="expdate" style="font-family:Arial, sans-serif;">Expiration Date</label>
+    	<input type="text" value="" name="expdate" id="expdate" placeholder="MM/YY">
+    </fieldset>
+    
+    <input type="submit" value="Sign Up!" name="submit" id="submit" style="font-family:Arial, sans-serif;">
 </form>
 
 
-
+</body>
 </template>
