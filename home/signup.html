@@ -1,65 +1,68 @@
 
 <template name="signup">
+<head>
+<title>Rider - Sign-Up</title>
 
+</head>
 <body>
-<h1 style="font-family:Arial, sans-serif;">Signup as a Rider</h1>
+<h1 style="font-family:Arial, sans-serif; font-size: 200%;">Signup as a Rider</h1>
 
 <form class="form-vertical" action="/signup_submit/" method="POST" autocomplete="on">
 	<fieldset>
-    	<legend style="font-family:Arial, sans-serif;">Account</legend>
+    	<legend style="font-family:Arial, sans-serif; font-size: 20px;">Account</legend>
         
-    	<label for="email" style="font-family:Arial, sans-serif;">Email</label>
-    	<input type="email" value="" name="email" id="email" placeholder="name@example.com">
+    	<label for="email" style="font-family:Arial, sans-serif; font-size: 20px;">Email</label>
+    	<input type="email" value="" name="email" id="email" placeholder="name@example.com" style="font-family:Arial, sans-serif; font-size: 18px;">
     	<br>
-    	<label for="password" style="font-family:Arial, sans-serif;">Password</label>
-    	<input type="password" value="" name="password" id="password"   placeholder="At least 5 characters">
+    	<label for="password" style="font-family:Arial, sans-serif; font-size: 20px;">Password</label>
+    	<input type="password" value="" name="password" id="password"   placeholder="At least 5 characters" style="font-family:Arial, sans-serif; font-size: 18px;">
     </fieldset>
     
-    <fieldset style="font-family:Arial, sans-serif;">
+    <fieldset style="font-family:Arial, sans-serif; font-size: 20px;">
     	<legend>Rider Information</legend>
         
-    	<label for="rider-name" style="font-family:Arial, sans-serif;">Name</label>
-    	<input type="text" value="" name="name" id="rider-name" placeholder="John">
+    	<label for="rider-name" style="font-family:Arial, sans-serif; font-size: 20px;">Name</label>
+    	<input type="text" value="" name="name" id="rider-name" placeholder="John" style="font-family:Arial, sans-serif; font-size: 18px;">
     	<br>
-    	<label for="rider-mobile">Phone Number</label> 
-    	<input type="tel" value="" name="rider-mobile" id="rider-mobile"   placeholder="(555) 555-5555">
+    	<label for="rider-mobile" style="font-family:Arial, sans-serif; font-size: 20px;">Phone Number</label> 
+    	<input type="tel" value="" name="rider-mobile" id="rider-mobile"   placeholder="(555) 555-5555" style="font-family:Arial, sans-serif; font-size: 18px;">
         <br>
-        <label for="rider-address">Address</label>
-        <input type="text" value="" name="rider-address" id="rider-address"   placeholder="1200 Main St">
-        <input type="text" value="" name="rider-state" id="rider-state"   placeholder="State">
-        <input type="text" value="" name="rider-zip" id="rider-zip"   placeholder="ZIP Code">
+        <label for="rider-address" style="font-family:Arial, sans-serif; font-size: 20px;">Address</label>
+        <input type="text" value="" name="rider-address" id="rider-address"   placeholder="1200 Main St" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="rider-state" id="rider-state"   placeholder="State" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="rider-zip" id="rider-zip"   placeholder="ZIP Code" style="font-family:Arial, sans-serif; font-size: 18px;">
     </fieldset>
     
     <fieldset>
-    	<legend style="font-family:Arial, sans-serif;">Additional Person of Contact</legend>
+    	<legend style="font-family:Arial, sans-serif; font-size: 20px;">Additional Person of Contact</legend>
         
-    	<label for="other-name" style="font-family:Arial, sans-serif;">Name</label>
-    	<input type="text" value="" name="name" id="other-name" placeholder="John">
+    	<label for="other-name" style="font-family:Arial, sans-serif; font-size: 20px;">Name</label>
+    	<input type="text" value="" name="name" id="other-name" placeholder="John" style="font-family:Arial, sans-serif; font-size: 18px;">
     	<br>
-    	<label for="other-mobile" style="font-family:Arial, sans-serif;">Phone Number</label> 
-    	<input type="tel" value="" name="mobile" id="other-mobile"   placeholder="(555) 555-5555">
+    	<label for="other-mobile" style="font-family:Arial, sans-serif; font-size: 20px;">Phone Number</label> 
+    	<input type="tel" value="" name="mobile" id="other-mobile"   placeholder="(555) 555-5555" style="font-family:Arial, sans-serif; font-size: 18px;">
         <br>
-        <label for="other-address" style="font-family:Arial, sans-serif;">Address</label>
-        <input type="text" value="" name="other-address" id="other-address"   placeholder="1200 Main St">
-        <input type="text" value="" name="other-state" id="other-state"   placeholder="State">
-        <input type="text" value="" name="other-zip" id="other-zip"   placeholder="ZIP Code">
+        <label for="other-address" style="font-family:Arial, sans-serif; font-size: 20px;">Address</label>
+        <input type="text" value="" name="other-address" id="other-address"   placeholder="1200 Main St" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="other-state" id="other-state"   placeholder="State" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="other-zip" id="other-zip"   placeholder="ZIP Code" style="font-family:Arial, sans-serif; font-size: 18px;">
     </fieldset>
     
     <fieldset>
-    	<legend style="font-family:Arial, sans-serif;">Credit Card Info</legend>
-        <p style="font-family:Arial, sans-serif;">We ask for a small monthly fee in order to compensate our drivers for gas costs.</p>
+    	<legend style="font-family:Arial, sans-serif; font-size: 20px;">Credit Card Info</legend>
+        <p style="font-family:Arial, sans-serif; font-size: 20px;">We ask for a small monthly fee in order to compensate our drivers for gas costs.</p>
         
-        <label for="creditcard" style="font-family:Arial, sans-serif;">Credit Card Number</label>
-    	<input type="text" value="" name="creditcard" id="creditcard" placeholder="XXXX-XXXX-XXXX-XXXX">
+        <label for="creditcard" style="font-family:Arial, sans-serif; font-size: 20px;">Credit Card Number</label>
+    	<input type="text" value="" name="creditcard" id="creditcard" placeholder="XXXX-XXXX-XXXX-XXXX" style="font-family:Arial, sans-serif; font-size: 18px;">
         
-        <label for="ccv" style="font-family:Arial, sans-serif;">CCV</label>
-    	<input type="text" value="" name="ccv" id="ccv" placeholder="XXX">
+        <label for="ccv" style="font-family:Arial, sans-serif; font-size: 20px;">CCV</label>
+    	<input type="text" value="" name="ccv" id="ccv" placeholder="XXX" style="font-family:Arial, sans-serif; font-size: 18px;">
         <br>
-        <label for="expdate" style="font-family:Arial, sans-serif;">Expiration Date</label>
-    	<input type="text" value="" name="expdate" id="expdate" placeholder="MM/YY">
+        <label for="expdate" style="font-family:Arial, sans-serif; font-size: 20px;">Expiration Date</label>
+    	<input type="text" value="" name="expdate" id="expdate" placeholder="MM/YY" style="font-family:Arial, sans-serif; font-size: 18px;">
     </fieldset>
     
-    <input type="submit" value="Sign Up!" name="submit" id="submit" style="font-family:Arial, sans-serif;">
+    <input type="submit" value="Sign Up!" name="submit" id="submit" style="font-family:Arial, sans-serif; font-size: 20px;">
 </form>
 
 

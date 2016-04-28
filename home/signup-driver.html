@@ -1,3 +1,51 @@
 <template name="signup-driver">
+<head>
+<title>Driver - Sign-Up</title>
 
+</head>
+<body>
+<h1 style="font-family:Arial, sans-serif; font-size: 200%;">Signup as a Driver</h1>
+
+<form class="form-vertical" action="/signup_submit/" method="POST" autocomplete="on">
+	<fieldset>
+    	<legend style="font-family:Arial, sans-serif; font-size: 20px;">Account</legend>
+        
+    	<label for="email" style="font-family:Arial, sans-serif; font-size: 20px;">Email</label>
+    	<input type="email" value="" name="email" id="email" placeholder="name@example.com" style="font-family:Arial, sans-serif; font-size: 18px;">
+    	<br>
+    	<label for="password" style="font-family:Arial, sans-serif; font-size: 20px;">Password</label>
+    	<input type="password" value="" name="password" id="password"   placeholder="At least 5 characters" style="font-family:Arial, sans-serif; font-size: 18px;">
+    </fieldset>
+    
+    <fieldset style="font-family:Arial, sans-serif; font-size: 20px;">
+    	<legend>Contact Information</legend>
+        
+    	<label for="driver-name" style="font-family:Arial, sans-serif; font-size: 20px;">Name</label>
+    	<input type="text" value="" name="name" id="driver-name" placeholder="John" style="font-family:Arial, sans-serif; font-size: 18px;">
+    	<br>
+    	<label for="driver-mobile" style="font-family:Arial, sans-serif; font-size: 20px;">Phone Number</label> 
+    	<input type="tel" value="" name="driver-mobile" id="driver-mobile"   placeholder="(555) 555-5555" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <br>
+        <label for="driver-address" style="font-family:Arial, sans-serif; font-size: 20px;">Address</label>
+        <input type="text" value="" name="driver-address" id="driver-address"   placeholder="1200 Main St" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="driver-state" id="driver-state"   placeholder="State" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="driver-zip" id="driver-zip"   placeholder="ZIP Code" style="font-family:Arial, sans-serif; font-size: 18px;">
+    </fieldset>
+    
+    <fieldset>
+    	<legend style="font-family:Arial, sans-serif; font-size: 20px;">Background Information</legend>
+        
+    	<label for="license-number" style="font-family:Arial, sans-serif; font-size: 20px;">Driver's License Number</label>
+    	<input type="text" value="" name="license-number" id="license-number" placeholder="XXXX-XXXX-XXXX" style="font-family:Arial, sans-serif; font-size: 18px;">
+    	<br>
+    	<label for="senior-center" style="font-family:Arial, sans-serif; font-size: 20px;">Do you work for a local senior center? If so, which one?</label> 
+    	<input type="text" value="" name="senior-center" id="senior-center"   placeholder="Central Senior Center" style="font-family:Arial, sans-serif; font-size: 18px;">
+     </fieldset>
+     
+    
+    <input type="submit" value="Sign Up!" name="submit" id="submit" style="font-family:Arial, sans-serif; font-size: 20px;">
+</form>
+
+
+</body>
 </template>
