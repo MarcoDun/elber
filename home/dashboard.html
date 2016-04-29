@@ -159,7 +159,7 @@ function createCalendar() {
 
 function checkevents(day,month,year,week,dayofweek) {
 var numevents = 0;
-var floater = 0;
+
 
 	for (var i = 0; i < events.length; i++) {
 		if (events[i][0] == "W") {
@@ -172,14 +172,7 @@ var floater = 0;
 			if ((events[i][1] == 3) && (events[i][2] == 0) && (events[i][3] == 0) ) {
 				easter(year);
 				if (easterday == day && eastermonth == month) numevents++;
-			} else {
-				floater = floatingholiday(year,events[i][1],events[i][2],events[i][3]);
-				if ((month == 5) && (events[i][1] == 5) && (events[i][2] == 4) && (events[i][3] == 2)) {
-					if ((floater + 7 <= 31) && (day == floater + 7)) {
-						numevents++;
-					} else if ((floater + 7 > 31) && (day == floater)) numevents++;
-				} else if ((events[i][1] == month) && (floater == day)) numevents++;
-			}
+			} 
 		}
 		else if ((events[i][2] == day) && (events[i][1] == month) && (events[i][3] == year)) {
 			numevents++;
@@ -196,7 +189,6 @@ var floater = 0;
 
 function showevents(day,month,year,week,dayofweek) {
 var theevent = "";
-var floater = 0;
 
 	for (var i = 0; i < events.length; i++) {
 		// First we'll process recurring events (if any):
@@ -238,37 +230,7 @@ var floater = 0;
 						theevent += '\n -------------- \n\n';
 						document.forms.eventform.eventlist.value = theevent;
 					} 
-				} else {
-					floater = floatingholiday(year,events[i][1],events[i][2],events[i][3]);
-
-					if ((month == 5) && (events[i][1] == 5) && (events[i][2] == 4) && (events[i][3] == 2)) {
-						if ((floater + 7 <= 31) && (day == floater + 7)) {
-							theevent += "Events of: \n" + month +'/'+ day +'/'+ year + '\n';
-							theevent += events[i][6] + '\n';
-							theevent += 'Start Time: ' + events[i][4] + '\n';
-							theevent += 'Ending Time: ' + events[i][5] + '\n';
-							theevent += 'Description: ' + events[i][7] + '\n';
-							theevent += '\n -------------- \n\n';
-							document.forms.eventform.eventlist.value = theevent;
-						} else if ((floater + 7 > 31) && (day == floater)) {
-							theevent += "Events of: \n" + month +'/'+ day +'/'+ year + '\n';
-							theevent += events[i][6] + '\n';
-							theevent += 'Start Time: ' + events[i][4] + '\n';
-							theevent += 'Ending Time: ' + events[i][5] + '\n';
-							theevent += 'Description: ' + events[i][7] + '\n';
-							theevent += '\n -------------- \n\n';
-							document.forms.eventform.eventlist.value = theevent;
-						}
-					} else if ((events[i][1] == month) && (floater == day)) {
-						theevent += "Events of: \n" + month +'/'+ day +'/'+ year + '\n';
-						theevent += events[i][6] + '\n';
-						theevent += 'Start Time: ' + events[i][4] + '\n';
-						theevent += 'Ending Time: ' + events[i][5] + '\n';
-						theevent += 'Description: ' + events[i][7] + '\n';
-						theevent += '\n -------------- \n\n';
-						document.forms.eventform.eventlist.value = theevent;
-					}
-				}
+				} 
 		}
 		}
 		// Now we'll process any One Time events happening on the matching month, day, year:
@@ -285,44 +247,6 @@ var floater = 0;
 	if (theevent == "") document.forms.eventform.eventlist.value = 'No events to show.';
 }
 
-
-function floatingholiday(targetyr,targetmo,cardinaloccurrence,targetday) {
-// Floating holidays/events of the events.js file uses:
-//	the Month field for the Month (here it becomes the targetmo field)
-//	the Day field as the Cardinal Occurrence  (here it becomes the cardinaloccurrence field)
-//		1=1st, 2=2nd, 3=3rd, 4=4th, 5=5th, 6=6th occurrence of the day listed next
-//	the Year field as the Day of the week the event/holiday falls on  (here it becomes the targetday field)
-//		1=Sunday, 2=Monday, 3=Tuesday, 4=Wednesday, 5=Thurday, 6=Friday, 7=Saturday
-//	example: "F",	"1",	"3",	"2", = Floating holiday in January on the 3rd Monday of that month.
-//
-// In our code below:
-// 	targetyr is the active year
-// 	targetmo is the active month (1-12)
-// 	cardinaloccurrence is the xth occurrence of the targetday (1-6)
-// 	targetday is the day of the week the floating holiday is on
-//		0=Sun; 1=Mon; 2=Tue; 3=Wed; 4=Thu; 5=Fri; 6=Sat
-//		Note: subtract 1 from the targetday field if the info comes from the events.js file
-//
-// Note:
-//	If Memorial Day falls on the 22nd, 23rd, or 24th, then we add 7 to the dayofmonth to the result.
-//
-// Example: targetyr = 2052; targetmo = 5; cardinaloccurrence = 4; targetday = 1
-//	This is the same as saying our floating holiday in the year 2052, is during May, on the 4th Monday
-//
-var firstdate = new Date(String(targetmo)+"/1/"+String(targetyr));	// Object Storing the first day of the current month.
-var firstday = firstdate.getUTCDay();	// The first day (0-6) of the target month.
-var dayofmonth = 0;	// zero out our calendar day variable.
-
-	targetday = targetday - 1;
-
-	if (targetday >= firstday) {
-		cardinaloccurrence--;	// Subtract 1 from cardinal day.
-		dayofmonth = (cardinaloccurrence * 7) + ((targetday - firstday)+1);
-	} else {
-		dayofmonth = (cardinaloccurrence * 7) + ((targetday - firstday)+1);
-	}
-return dayofmonth;
-}
 
 </script>
 
