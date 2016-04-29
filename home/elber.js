@@ -26,6 +26,10 @@ Router.route('/signup-driver', function() {
 	this.render('signup-driver');
 });
 
+Router.route('/scheduleride', function(){
+	this.render('scheduleride');
+});
+
 if (Meteor.isClient) {
   
 }
