@@ -2,20 +2,47 @@
 <head>
 	<title>Login</title>
 </head>
-<body>
+
+<a style="font-size:150%;">Elber</a>
+<a href="/about" style="float: right;margin-right: 30px">About</a>
+<a href="/faq" style="float: right;margin-right: 30px">FAQ</a>
+<hr>
+<br>
+<br>
+<br>
+
+<body bgcolor="#eaf4fc">
 	<section class="loginform cf">
-		<form name="login" action="index_submit" method="get" accept-charset="utf-8">
-			<ul>
-				<li>
+		<form name="login" action="index_submit" method="get" accept-charset="utf-8"> 
+			<div class="wrapper" align="center">
+			<ul style="list-style-type:none"> 
+				<font face="Verdana" size="5">
+
+				<li> 
 					<label for="usermail">Email</label>
 					<input type="email" name="usermail" placeholder="yourname@email.com" required>
 				</li>
 				<li>
 					<label for="password">Password</label>
-					<input type="password" name="password" placeholder="password" required></li>
-				<button class="button"  style="font-size:250%;margin-right: 30px; " onClick="window.location.href='/dashboard';"><span class="icon">Login</span></button>
+					<input type="password" name="password" placeholder="password" required>
+				</li>
+
+
 			</ul>
+			</div>
 		</form>
+
+
+
+		<div class="wrapper" align="center">
+			<button class="button"  style="font-size:75%;margin-right: 20px; " onClick="window.location.href='/dashboard';">
+				<span class="icon">Log In As A Rider</span>
+			</button>
+			<button class="button"  style="font-size:75%;margin-right: 20px; " onClick="window.location.href='/dashboard';">
+				<span class="icon">Log In As A Driver</span>
+			</button>
+		</div>
+
 	</section>
 </body>
 </template>
