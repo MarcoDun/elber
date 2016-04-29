@@ -1,0 +1,114 @@
+<template name="pickride">
+<head>
+	<title>Pick A Ride </title>
+</head>
+
+<a style="font-size:150%;">Elber</a>
+<a href="/about" style="float: right;margin-right: 30px">About</a>
+<a href="/faq" style="float: right;margin-right: 30px">FAQ</a>
+<hr>
+<br>
+
+<body>
+	<section class="picride">
+		<form name="pickride" action="index_submit" method="get" accept-charset="utf-8"> 
+			<div class="wrapper" align="center">
+				<p>Give A Ride</p>
+				<div style="width: 40%; margin: 0 auto; text-align: left">Ride Queue</div>
+				
+				<table border="1" style="width:40%"> 
+					<col width="15%">
+					<col width="50%">
+					<col width="15%">
+					<col width="15%">
+					<col width="5%">
+
+					  <tr>
+					  	<th>Ride</th>
+					  	<th>Address</th>
+					  	<th>Time</th>
+					  	<th>Date</th>
+					  	<th>Option</th>
+					  </tr>
+
+					<tr>
+						<td>Ride 1</td>
+						<td>1500 W Kenndy Rd</td>
+						<td>4:00 PM</td>
+						<td>04/29/16</td>
+						<td><input type="checkbox" name="choice" value="Yes"></td>
+					</tr>
+
+					<tr>
+						<td>Ride 2</td> 
+						<td>1008 Main St</td>
+						<td>6:20 PM</td>
+						<td>04/29/16</td>
+						<td><input type="checkbox" name="choice" value="Yes"></td>
+					</tr>
+
+					<tr>
+						<td>Ride 3</td> 
+						<td>353 Vine St</td>
+						<td>7:25 PM</td>
+						<td>04/29/16</td>
+						<td><input type="checkbox" name="choice" value="Yes"></td>
+					</tr>
+
+					<tr>
+						<td>Ride 4</td>
+						<td>735 Michigan Ave</td>
+						<td>8:50 PM</td>
+						<td>04/29/16</td>
+						<td><input type="checkbox" name="choice" value="Yes"></td>
+					</tr>
+
+					<tr>
+						<td>Ride 5</td>
+						<td>1404 Univeristy Ave</td>
+						<td>8:55 AM</td>
+						<td>04/30/16</td>
+						<td><input type="checkbox" name="choice" value="Yes"></td>
+					</tr>
+
+					<tr>
+						<td>Ride 6</td>
+						<td>201 N Goodwin Ave</td>
+						<td>10:15 AM</td>
+						<td>04/30/16</td>
+						<td><input type="checkbox" name="choice" value="Yes"></td>
+					</tr>
+
+					<tr>
+						<td>Ride 7</td>	
+						<td>505 E Armory Ave</td>
+						<td>2:20 PM</td>
+						<td>04/30/16</td>	
+						<td><input type="checkbox" name="choice" value="Yes"></td>		
+					</tr>
+
+					<tr>
+						<td>Ride 8</td>	
+						<td>272 Wright St</td>
+						<td>4:20 PM</td>
+						<td>04/30/16</td>	
+						<td><input type="checkbox" name="choice" value="Yes"></td>		
+					</tr>
+
+				
+				</table>
+				<br>
+
+				<button class="button"  style="font-size:100%;margin-right: 30px; " onClick="window.location.href='/dashboard';">
+				<span class="icon">Take these Rides!</span>
+				</button>
+
+			</div>
+		</form>
+
+	</section>
+
+</body>
+
+
+</template>

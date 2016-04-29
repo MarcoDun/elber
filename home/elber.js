@@ -30,6 +30,10 @@ Router.route('/scheduleride', function(){
 	this.render('scheduleride');
 });
 
+Router.route('/pickride', function(){
+	this.render('pickride');
+});
+
 if (Meteor.isClient) {
   
 }
