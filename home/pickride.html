@@ -10,11 +10,12 @@
 <br>
 
 <body>
-	<section class="picride">
+	<section class="pickride">
 		<form name="pickride" action="index_submit" method="get" accept-charset="utf-8"> 
 			<div class="wrapper" align="center">
-				<p>Give A Ride</p>
-				<div style="width: 40%; margin: 0 auto; text-align: left">Ride Queue</div>
+				<p>Give Ride(s)</p>
+				<div style="width: 40%; margin: 0 auto; text-align: left">Ride Queue 
+<button class="button"  style="font-size:100%;margin-right: 30px; "><span class="icon">Refresh Queue </span></button></div>
 				
 				<table border="1" style="width:40%"> 
 					<col width="15%">
@@ -28,7 +29,7 @@
 					  	<th>Address</th>
 					  	<th>Time</th>
 					  	<th>Date</th>
-					  	<th>Option</th>
+					  	<th>Commit to Ride</th>
 					  </tr>
 
 					<tr>
@@ -99,7 +100,7 @@
 				</table>
 				<br>
 
-				<button class="button"  style="font-size:100%;margin-right: 30px; " onClick="window.location.href='/dashboard_rider_after';"><span class="icon">Take these Ride!</span></button>
+				<button class="button"  style="font-size:100%;margin-right: 30px; " onClick="window.location.href='/dashboard_rider_after';"><span class="icon">Add selected rides to calender!</span></button>
 
 			</div>
 		</form>

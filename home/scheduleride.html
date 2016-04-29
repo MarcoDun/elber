@@ -39,6 +39,8 @@
 					<input type="state" name="state" placeholder="State" required>
 					<label for="zip">Zip</label>
 					<input type="zip" name="zip" placeholder="zip" required>
+
+Save this destination for future use? <input type="checkbox" name="choice" value="Yes">
 				</li>
 
 				<li>
@@ -60,24 +62,28 @@
 					<input type="pickuptimeback" name="pickuptimeback" placeholder="hh:mm AM/PM" required>
 					<ul>
 						
-						<li> If unkown, please enter "unknown" </li>
-						<li> If no return trip needed, please enter "N/A" </li>
+						
+  <input type="radio" name="rideback" value="yes"> I know what time I will need a return ride and have entered that time above<br>
+  <input type="radio" name="rideback" value="no"> I don't know what time I'll need a return ride<br>
+  <input type="radio" name="rideback" value="veryno"> I will not need a return ride
+
 					</ul>
 				</li>
 
 				<br>
 
-				<li>
-					
-					Save this Ride? <input type="checkbox" name="choice" value="Yes">
-				</li>
-			</ul>
+							</ul>
 		</form>
 
 		<div class="wrapper" align="center">
 			<button class="button"  style="font-size:100%;margin-right: 30px; " onClick="window.location.href='/dashboard_after';">
-				<span class="icon">Schdule Ride!</span>
+				<span class="icon">Schedule Ride!</span>
 			</button>
+
+<button class="button"  style="font-size:100%;margin-right: 30px; " onClick="window.location.href='/dashboard_after';">
+				<span class="icon">Go back without scheduling this ride</span>
+			</button>
+
 		</div>
 		
 
