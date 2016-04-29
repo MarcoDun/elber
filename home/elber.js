@@ -18,7 +18,9 @@ Router.route('/login', function() {
 	this.render('login');
 });
 
-
+Router.route('/signup', function() {
+	this.render('choose-signup');
+});
 
 
 if (Meteor.isClient) {
