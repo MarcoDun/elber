@@ -108,22 +108,22 @@ easterday = day;
 function createCalendar() {
 	calendarString = '';
 	var daycounter = 0;
-	calendarString += '<table width="312" border="1" cellpadding="0" cellspacing="1">';
+	calendarString += '<table width="800" border="1" cellpadding="0" cellspacing="1">';
 	calendarString += '<tr>';
-	calendarString += '<td align=\"center\" valign=\"center\" width=\"40\" height=\"40\"><a href=\"#\" onMouseOver=\"document.PrevYr.src=\'/PrevYrOn40x40\.jpg\';\" onMouseOut=\"document.PrevYr.src=\'/PrevYrOff40x40\.jpg\';\" onClick=\"changedate(\'prevyr\')\"><img name=\"PrevYr\" src=\"/PrevYrOff40x40\.jpg\" width=\"40\" height=\"40\" border=\"0\" alt=\"Prev Yr\"\/><\/a><\/td>';
-	calendarString += '<td align=\"center\" valign=\"center\" width=\"40\" height=\"40\"><a href=\"#\" onMouseOver=\"document.PrevMo.src=\'/PrevMoOn40x40\.jpg\';\" onMouseOut=\"document.PrevMo.src=\'/PrevMoOff40x40\.jpg\';\" onClick=\"changedate(\'prevmo\')\"><img name=\"PrevMo\" src=\"/PrevMoOff40x40\.jpg\" width=\"40\" height=\"40\" border=\"0\" alt=\"Prev Mo\"\/><\/a><\/td>';
-	calendarString += '<td bgcolor=\"#C8C896\" align=\"center\" valign=\"center\" width=\"128\" height=\"40\" colspan=\"3\"><b>' + wordMonth[monthNum-1] + '&nbsp;&nbsp;' + yearNum + '<\/b><\/td>';
-	calendarString += '<td align=\"center\" valign=\"center\" width=\"40\" height=\"40\"><a href=\"#\" onMouseOver=\"document.NextMo.src=\'/NextMoOn40x40\.jpg\';\" onMouseOut=\"document.NextMo.src=\'/NextMoOff40x40\.jpg\';\" onClick=\"changedate(\'nextmo\')\"><img name=\"NextMo\" src=\"/NextMoOff40x40\.jpg\" width=\"40\" height=\"40\" border=\"0\" alt=\"Next Mo\"\/><\/a><\/td>';
-	calendarString += '<td align=\"center\" valign=\"center\" width=\"40\" height=\"40\"><a href=\"#\" onMouseOver=\"document.NextYr.src=\'/NextYrOn40x40\.jpg\';\" onMouseOut=\"document.NextYr.src=\'/NextYrOff40x40\.jpg\';\" onClick=\"changedate(\'nextyr\')\"><img name=\"NextYr\" src=\"/NextYrOff40x40\.jpg\" width=\"40\" height=\"40\" border=\"0\" alt=\"Next Yr\"\/><\/a><\/td>';
+	calendarString += '<td align=\"center\" valign=\"center\" width=\"80\" height=\"80\"><a href=\"#\" onMouseOver=\"document.PrevYr.src=\'/PrevYrOn40x40\.jpg\';\" onMouseOut=\"document.PrevYr.src=\'/PrevYrOff40x40\.jpg\';\" onClick=\"changedate(\'prevyr\')\"><img name=\"PrevYr\" src=\"/PrevYrOff40x40\.jpg\" width=\"80\" height=\"80\" border=\"0\" alt=\"Prev Yr\"\/><\/a><\/td>';
+	calendarString += '<td align=\"center\" valign=\"center\" width=\"80\" height=\"80\"><a href=\"#\" onMouseOver=\"document.PrevMo.src=\'/PrevMoOn40x40\.jpg\';\" onMouseOut=\"document.PrevMo.src=\'/PrevMoOff40x40\.jpg\';\" onClick=\"changedate(\'prevmo\')\"><img name=\"PrevMo\" src=\"/PrevMoOff40x40\.jpg\" width=\"80\" height=\"80\" border=\"0\" alt=\"Prev Mo\"\/><\/a><\/td>';
+	calendarString += '<td bgcolor=\"#C8C896\" align=\"center\" valign=\"center\" width=\"256\" height=\"40\" colspan=\"3\"><b>' + wordMonth[monthNum-1] + '&nbsp;&nbsp;' + yearNum + '<\/b><\/td>';
+	calendarString += '<td align=\"center\" valign=\"center\" width=\"80\" height=\"80\"><a href=\"#\" onMouseOver=\"document.NextMo.src=\'/NextMoOn40x40\.jpg\';\" onMouseOut=\"document.NextMo.src=\'/NextMoOff40x40\.jpg\';\" onClick=\"changedate(\'nextmo\')\"><img name=\"NextMo\" src=\"/NextMoOff40x40\.jpg\" width=\"80\" height=\"80\" border=\"0\" alt=\"Next Mo\"\/><\/a><\/td>';
+	calendarString += '<td align=\"center\" valign=\"center\" width=\"80\" height=\"80\"><a href=\"#\" onMouseOver=\"document.NextYr.src=\'/NextYrOn40x40\.jpg\';\" onMouseOut=\"document.NextYr.src=\'/NextYrOff40x40\.jpg\';\" onClick=\"changedate(\'nextyr\')\"><img name=\"NextYr\" src=\"/NextYrOff40x40\.jpg\" width=\"80\" height=\"80\" border=\"0\" alt=\"Next Yr\"\/><\/a><\/td>';
 	calendarString += '<\/tr>';
 	calendarString += '<tr>';
-	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"40\" height=\"22\">Sun<\/td>';
-	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"40\" height=\"22\">Mon<\/td>';
-	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"40\" height=\"22\">Tue<\/td>';
-	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"40\" height=\"22\">Wed<\/td>';
-	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"40\" height=\"22\">Thu<\/td>';
-	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"40\" height=\"22\">Fri<\/td>';
-	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"40\" height=\"22\">Sat<\/td>';
+	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"80\" height=\"44\">Sun<\/td>';
+	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"80\" height=\"44\">Mon<\/td>';
+	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"80\" height=\"44\">Tue<\/td>';
+	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"80\" height=\"44\">Wed<\/td>';
+	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"80\" height=\"44\">Thu<\/td>';
+	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"80\" height=\"44\">Fri<\/td>';
+	calendarString += '<td bgcolor=\"#DDDDDD\" align=\"center\" valign=\"center\" width=\"80\" height=\"44\">Sat<\/td>';
 	calendarString += '<\/tr>';
 
 	thisDate == 1;
@@ -134,15 +134,15 @@ function createCalendar() {
 			daycounter = (thisDate - firstDay)+1;
 			thisDate++;
 			if ((daycounter > numbDays) || (daycounter < 1)) {
-				calendarString += '<td align=\"center\" bgcolor=\"#888888\" height=\"30\" width=\"40\">&nbsp;<\/td>';
+				calendarString += '<td align=\"center\" bgcolor=\"#888888\" height=\"60\" width=\"80\">&nbsp;<\/td>';
 			} else {
 				if (checkevents(daycounter,monthNum,yearNum,i,x) || ((todaysDay == x) && (todaysDate == daycounter) && (todaysMonth == monthNum))){
 					if ((todaysDay == x) && (todaysDate == daycounter) && (todaysMonth == monthNum)) {
-						calendarString += '<td align=\"center\" bgcolor=\"#AAFFAA\" height=\"30\" width=\"40\"><a href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
+						calendarString += '<td align=\"center\" bgcolor=\"#AAFFAA\" height=\"60\" width=\"80\"><a href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
 					}
- 					else	calendarString += '<td align=\"center\" bgcolor=\"#FFFFC8\" height=\"30\" width=\"40\"><a href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
+ 					else	calendarString += '<td align=\"center\" bgcolor=\"#FFFFC8\" height=\"60\" width=\"80\"><a href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
 				} else {
-					calendarString += '<td align=\"center\" bgcolor=\"#DDFFFF\" height=\"30\" width=\"40\">' + daycounter + '<\/td>';
+					calendarString += '<td align=\"center\" bgcolor=\"#DDFFFF\" height=\"60\" width=\"80\">' + daycounter + '<\/td>';
 				}
 			}
 		}
@@ -333,10 +333,10 @@ return dayofmonth;
 <p align="center">Calendar of Events</p>
 
 <center>
-<table id="evtcal" border="0" cellpadding="0" cellspacing="0" width="584">
+<table id="evtcal" border="0" cellpadding="0" cellspacing="0" width="1160">
 	<tbody>
 		<tr>
-			<td style="padding: 3px;" align="center" bgcolor="#aaddff" valign="top" width="314">
+			<td style="padding: 3px;" align="center" bgcolor="#aaddff" valign="top" width="700">
 				<div id="calendar"><!--  Dynamically Filled --></div>
 				You can move to a different month or year by clicking on the buttons or return to today's date by clicking "Show Current Date".</td>
 			<td width="10">&nbsp;</td>
