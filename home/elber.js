@@ -22,6 +22,9 @@ Router.route('/choose-signup', function() {
 	this.render('choose-signup');
 });
 
+Router.route('/signup-driver', function() {
+	this.render('signup-driver');
+});
 
 if (Meteor.isClient) {
   
