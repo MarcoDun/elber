@@ -1,9 +1,16 @@
-
-<template name="signup">
 <head>
 <title>Rider - Sign-Up</title>
 
 </head>
+
+<a style="font-size:150%;">Elber</a>
+<a href="./about.html" style="float: right;margin-right: 30px">About</a>
+<a href="./faq.html" style="float: right;margin-right: 30px">FAQ</a>
+<hr>
+<br>
+<br>
+<br>
+
 <body>
 <h1 style="font-family:Arial, sans-serif; font-size: 200%;">Signup as a Rider</h1>
 
@@ -12,7 +19,7 @@
     	<legend style="font-family:Arial, sans-serif; font-size: 20px;">Account</legend>
         
     	<label for="email" style="font-family:Arial, sans-serif; font-size: 20px;">Email</label>
-    	<input type="email" value="" name="email" id="email" placeholder="name@example.com" style="font-family:Arial, sans-serif; font-size: 18px;">
+    	<input type="email" value="" name="email" id="email" placeholder="john@email.com" style="font-family:Arial, sans-serif; font-size: 18px;">
     	<br>
     	<label for="password" style="font-family:Arial, sans-serif; font-size: 20px;">Password</label>
     	<input type="password" value="" name="password" id="password"   placeholder="At least 5 characters" style="font-family:Arial, sans-serif; font-size: 18px;">
@@ -22,31 +29,37 @@
     <fieldset style="font-family:Arial, sans-serif; font-size: 20px;">
     	<legend>Rider Information</legend>
         
-    	<label for="rider-name" style="font-family:Arial, sans-serif; font-size: 20px;">Name</label>
-    	<input type="text" value="" name="name" id="rider-name" placeholder="John" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <label for="rider-first-name" style="font-family:Arial, sans-serif; font-size: 20px;">First Name</label>
+        <input type="text" value="" name="name" id="rider-name" placeholder="John" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <br>
+    	<label for="rider-last-name" style="font-family:Arial, sans-serif; font-size: 20px;">Last Name</label>
+    	<input type="text" value="" name="name" id="rider-name" placeholder="DeWitt" style="font-family:Arial, sans-serif; font-size: 18px;">
     	<br>
     	<label for="rider-mobile" style="font-family:Arial, sans-serif; font-size: 20px;">Phone Number</label> 
-    	<input type="tel" value="" name="rider-mobile" id="rider-mobile"   placeholder="(555) 555-5555" style="font-family:Arial, sans-serif; font-size: 18px;">
+    	<input type="tel" value="" name="rider-mobile" id="rider-mobile"   placeholder="(555)555-5555" style="font-family:Arial, sans-serif; font-size: 18px;">
         <br>
         <label for="rider-address" style="font-family:Arial, sans-serif; font-size: 20px;">Address</label>
         <input type="text" value="" name="rider-address" id="rider-address"   placeholder="1200 Main St" style="font-family:Arial, sans-serif; font-size: 18px;">
-        <input type="text" value="" name="rider-state" id="rider-state"   placeholder="State" style="font-family:Arial, sans-serif; font-size: 18px;">
-        <input type="text" value="" name="rider-zip" id="rider-zip"   placeholder="ZIP Code" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="rider-state" id="rider-state"   placeholder="State(IL)" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="rider-zip" id="rider-zip"   placeholder="ZIP Code(61801)" style="font-family:Arial, sans-serif; font-size: 18px;">
     </fieldset>
     
     <fieldset>
     	<legend style="font-family:Arial, sans-serif; font-size: 20px;">Additional Person of Contact</legend>
         
-    	<label for="other-name" style="font-family:Arial, sans-serif; font-size: 20px;">Name</label>
-    	<input type="text" value="" name="name" id="other-name" placeholder="John" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <label for="other-name-first" style="font-family:Arial, sans-serif; font-size: 20px;">First Name</label>
+        <input type="text" value="" name="name" id="other-name" placeholder="Ryan" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <br>
+    	<label for="other-name-last" style="font-family:Arial, sans-serif; font-size: 20px;">Last Name</label>
+    	<input type="text" value="" name="name" id="other-name" placeholder="DeWitt" style="font-family:Arial, sans-serif; font-size: 18px;">
     	<br>
     	<label for="other-mobile" style="font-family:Arial, sans-serif; font-size: 20px;">Phone Number</label> 
-    	<input type="tel" value="" name="mobile" id="other-mobile"   placeholder="(555) 555-5555" style="font-family:Arial, sans-serif; font-size: 18px;">
+    	<input type="tel" value="" name="mobile" id="other-mobile"   placeholder="(666)666-6666" style="font-family:Arial, sans-serif; font-size: 18px;">
         <br>
         <label for="other-address" style="font-family:Arial, sans-serif; font-size: 20px;">Address</label>
         <input type="text" value="" name="other-address" id="other-address"   placeholder="1200 Main St" style="font-family:Arial, sans-serif; font-size: 18px;">
-        <input type="text" value="" name="other-state" id="other-state"   placeholder="State" style="font-family:Arial, sans-serif; font-size: 18px;">
-        <input type="text" value="" name="other-zip" id="other-zip"   placeholder="ZIP Code" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="other-state" id="other-state"   placeholder="State(IL)" style="font-family:Arial, sans-serif; font-size: 18px;">
+        <input type="text" value="" name="other-zip" id="other-zip"   placeholder="ZIP Code(61801)" style="font-family:Arial, sans-serif; font-size: 18px;">
     </fieldset>
     
     <fieldset>
@@ -62,10 +75,18 @@
         <label for="expdate" style="font-family:Arial, sans-serif; font-size: 20px;">Expiration Date</label>
     	<input type="text" value="" name="expdate" id="expdate" placeholder="MM/YY" style="font-family:Arial, sans-serif; font-size: 18px;">
     </fieldset>
-    
-    <input type="submit" value="Sign Up!" name="submit" id="submit" style="font-family:Arial, sans-serif;">
+
+
+    <div class="wrapper" align="center">
+        <button class="button"  style="font-size:175%;margin-right: 20px; " onClick="window.location.href='/confirmation-signup';">
+                <span class="icon">Sign Up!</span>
+        </button>
+    </div>
+    <!-- <input type="submit" value="Sign Up!" name="submit" id="submit" style="font-family:Arial, sans-serif;"> -->
+
+
+
 </form>
 
 
 </body>
-</template>

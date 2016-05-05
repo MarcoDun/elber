@@ -1,65 +1,70 @@
-<template name="scheduleride">
 <head>
 	<title>Schedule A Ride </title>
 </head>
 
 <a style="font-size:150%;">Elber</a>
-<a href="/about" style="float: right;margin-right: 30px">About</a>
-<a href="/faq" style="float: right;margin-right: 30px">FAQ</a>
+<a href="./about.html" style="float: right;margin-right: 30px">About</a>
+<a href="./faq.html" style="float: right;margin-right: 30px">FAQ</a>
 <hr>
 
 <body bgcolor="#eaf4fc">
 	<section class="schduleride">
+		<font size="6">
 		<form name="schduleride" action="index_submit" method="get" accept-charset="utf-8"> 
-			<ul style="list-style-type:none"> 
-
+			<ul style="list-style-type:none">
 
 				<li>
 					<label for="startaddress">Start Address</label>
-					<input type="address" name="startaddress" placeholder="Start Address For Your Ride" required>
+					<input type="address" name="startaddress" style="height: 30px; width: 400px" placeholder="Start Address For Your Ride" required>
 				</li>
 				<li>
 					<label for="city">City</label>
-					<input type="city" name="city" placeholder="City" required>
+					<input type="city" name="city" style="height: 30px" placeholder="City" required>
 					<label for="state">State</label>
-					<input type="state" name="state" placeholder="State" required>
+					<input type="state" name="state" style="height: 30px" placeholder="State" required>
 					<label for="zip">Zip</label>
-					<input type="zip" name="zip" placeholder="zip" required>
+					<input type="zip" name="zip" style="height: 30px" placeholder="zip" required>
 				</li>
+				<br>
+				<br>
+
 				<li>
 					<label for="destination">Destination Name</label>
-					<input type="destination" name="destination" placeholder="Destination Name For Your Ride" required>
+					<input type="destination" name="destination" style="height: 30px" placeholder="Destination Name For Your Ride" required>
 				</li>
 				<li>
-					 <label for="destinationaddress"> Address</label>
-					<input type="destinationaddress" name="destinationaddress" placeholder="Destination Address For Your Ride" required>
+					<label for="destinationaddress"> Address</label>
+					<input type="destinationaddress" name="destinationaddress" style="height: 30px; width: 400px" placeholder="Destination Address For Your Ride" required>
+				</li>
+				<li>	
 					<label for="city">City</label>
-					<input type="city" name="city" placeholder="City" required>
+					<input type="city" name="city" style="height: 30px" placeholder="City" required>
 					<label for="state">State</label>
-					<input type="state" name="state" placeholder="State" required>
+					<input type="state" name="state" style="height: 30px" placeholder="State" required>
 					<label for="zip">Zip</label>
-					<input type="zip" name="zip" placeholder="zip" required>
+					<input type="zip" name="zip" style="height: 30px" placeholder="zip" required>
+				</li>
 
 Save this destination for future use? <input type="checkbox" name="choice" value="Yes">
 				</li>
 
 				<li>
 					<label for="date"> Ride Date </label>
-					<input type="date" name="date" placeholder="dd/mm//yy" required>
+					<input type="date" name="date" style="height: 30px" placeholder="dd/mm//yy" required>
 				</li>
 
 				<br>
 
 				<li>
 					<label for="pickuptimego"> Pick Up Time From Start Address</label>
-					<input type="pickuptimego" name="pickuptimego" placeholder="hh:mm AM/PM" required> 
+					<input type="pickuptimego" name="pickuptimego" style="height: 30px" placeholder="hh:mm AM/PM" required> 
 				</li>
 
 				<br>
 
 				<li>
 					<label for="pickuptimeback"> Pick Up Time From Destination Address </label>
-					<input type="pickuptimeback" name="pickuptimeback" placeholder="hh:mm AM/PM" required>
+					<input type="pickuptimeback" name="pickuptimeback" style="height: 30px" placeholder="hh:mm AM/PM" required>
 					<ul>
 						
 						
@@ -74,13 +79,14 @@ Save this destination for future use? <input type="checkbox" name="choice" value
 
 							</ul>
 		</form>
+		</font>
 
 		<div class="wrapper" align="center">
-			<button class="button"  style="font-size:100%;margin-right: 30px; " onClick="window.location.href='/dashboard_after';">
+			<button class="button"  style="font-size:175%;margin-right: 30px; " onClick="window.location.href='/schedule_confirmation';">
 				<span class="icon">Schedule Ride!</span>
 			</button>
 
-<button class="button"  style="font-size:100%;margin-right: 30px; " onClick="window.location.href='/dashboard_after';">
+			<button class="button"  style="font-size:175%;margin-right: 30px; " onClick="window.location.href='/dashboard';">
 				<span class="icon">Go back without scheduling this ride</span>
 			</button>
 
@@ -90,6 +96,3 @@ Save this destination for future use? <input type="checkbox" name="choice" value
 	</section>
 
 </body>
-
-
-</template>
