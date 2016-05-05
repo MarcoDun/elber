@@ -34,11 +34,11 @@
 // "Y"early events are specific dates that never change - the Year field is ignored
 //	example - Christmas is: "12","25","",
 events_rider_after = new Array(
-	["",	"4",	"5",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Sieble To : Carle"],
-	["",	"4",	"8",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Sieble To : Carle"],
-	["",	"4",	"13",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Sieble To : Carle"],
-	["",	"4",	"20",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Sieble To : Carle"],
-	["",	"5",	"15",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Sieble To : Carle"]
+	["",	"4",	"5",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Siebel To : Carle"],
+	["",	"4",	"8",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Siebel To : Carle"],
+	["",	"4",	"13",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Siebel To : Carle"],
+	["",	"4",	"20",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Siebel To : Carle"],
+	["",	"5",	"15",	"2016",	"1:00 AM",	"12:00 PM",	"Hospital",	"From : Siebel To : Carle"]
 // Please omit the final comma after the ] from the last line above unless you are going to add another event at this time.
 );
 
