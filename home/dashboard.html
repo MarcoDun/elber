@@ -6,12 +6,15 @@
 <a href="./about.html" style="float: right;margin-right: 30px">About</a>
 <a href="./faq.html" style="float: right;margin-right: 30px">FAQ</a>
 <hr>
+
 <style type="text/css">
 
-#evtcal a:link {font: normal 12pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: none;}		/* unvisited link */
-#evtcal a:visited {font: normal 12pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: none;}	/* visited link */
-#evtcal a:hover {font: normal 12pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: underline;}	/* mouse over link */
-#evtcal a:active {font: normal 12pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: none;}		/* selected link */
+#evtcal a:link {font: normal 22pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: none;}		/* unvisited link */
+#evtcal a:visited {font: normal 22pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: none;}	/* visited link */
+#evtcal a:hover {font: normal 22pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: underline;}	/* mouse over link */
+#evtcal a:active {font: normal 22pt "Arial", "Helvetica", "Sans Serif"; color: #004400; text-decoration: none;}		/* selected link */
+body, td, td > a, a { font-size: 200%;}
+a { font-size: 100%; }
 
 </style>
 
@@ -138,15 +141,15 @@ function createCalendar() {
 			daycounter = (thisDate - firstDay)+1;
 			thisDate++;
 			if ((daycounter > numbDays) || (daycounter < 1)) {
-				calendarString += '<td align=\"center\" bgcolor=\"#888888\" height=\"60\" width=\"80\">&nbsp;<\/td>';
+				calendarString += '<td align=\"center\" bgcolor=\"#888888\" height=\"60\" width=\"80\" "font-size=175%;\">&nbsp;<\/td>';
 			} else {
 				if (checkevents(daycounter,monthNum,yearNum,i,x) || ((todaysDay == x) && (todaysDate == daycounter) && (todaysMonth == monthNum))){
 					if ((todaysDay == x) && (todaysDate == daycounter) && (todaysMonth == monthNum)) {
-						calendarString += '<td align=\"center\" bgcolor=\"#AAFFAA\" height=\"60\" width=\"80\"><a href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
+						calendarString += '<td align=\"center\" bgcolor=\"#AAFFAA\" height=\"60\" width=\"80\" "font-size=175%;\"><a font-size=175%;\" href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
 					}
- 					else	calendarString += '<td align=\"center\" bgcolor=\"#FFFFC8\" height=\"60\" width=\"80\"><a href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
+ 					else	calendarString += '<td align=\"center\" bgcolor=\"#FFFFC8\" height=\"60\" width=\"80\"><a  "font-size=175%;\" href=\"javascript:showevents(' + daycounter + ',' + monthNum + ',' + yearNum + ',' + i + ',' + x + ')\">' + daycounter + '<\/a><\/td>';
 				} else {
-					calendarString += '<td align=\"center\" bgcolor=\"#DDFFFF\" height=\"60\" width=\"80\">' + daycounter + '<\/td>';
+					calendarString += '<td align=\"center\" bgcolor=\"#DDFFFF\" height=\"60\" width=\"80\" style=\"font-size=175%;\">' + daycounter + '<\/td>';
 				}
 			}
 		}
@@ -257,7 +260,6 @@ var theevent = "";
 </head>
 
 <body style="background-color: transparent;" onload="changedate('return')">
- 
 <p align="center">Calendar of Events</p>
 
 <center>
@@ -274,10 +276,7 @@ var theevent = "";
 					<textarea name="eventlist" cols="25" rows="11" wrap="soft">Auto filled when clicking on date.</textarea>
 				</form>
 				<br>
-				<br>
-				<br>
-				<br>
-				 <button class="button" style="float: right;font-size:160%;margin-right: 35px" onClick="window.location.href='./scheduleride.html';"><span class="icon">Schedule a new ride!</span></button>
+				 <button class="button" style="float: right;font-size:105%;margin-right: 30px" onClick="window.location.href='./scheduleride.html';"><span class="icon">Schedule a ride!</span></button>
 				</center>
 			</td>
 		</tr>
